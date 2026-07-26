@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1b1d1f;
+  --muted: #6f726f;
+  --canvas: #f3f2ed;
+  --card: #fbfaf7;
+  --accent: #daff55;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--canvas);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 8% 0%, rgb(255 255 255 / 80%), transparent 27rem),
+    var(--canvas);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid rgb(27 29 31 / 30%);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--ink);
+  background: var(--accent);
+}
