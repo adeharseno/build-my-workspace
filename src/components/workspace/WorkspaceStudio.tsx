@@ -1,4 +1,4 @@
-import { ProductSelector } from "@/components/product/ProductSelector";
+import { CustomizationPanel } from "@/components/product/CustomizationPanel";
 import { SummaryPanel } from "@/components/summary/SummaryPanel";
 import { WorkspaceStage } from "@/components/workspace/WorkspaceStage";
 import { WORKSPACE_LAYOUT } from "@/constants/workspace.constants";
@@ -11,7 +11,7 @@ export function WorkspaceStudio() {
           <WorkspaceStage />
         </div>
         <div className={WORKSPACE_LAYOUT.productRegion}>
-          <ProductSelector />
+          <CustomizationPanel />
         </div>
         <div className={WORKSPACE_LAYOUT.summaryRegion}>
           <SummaryPanel />
