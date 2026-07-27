@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ProductSelector } from "@/components/product/ProductSelector";
 import { Toolbar } from "@/components/toolbar/Toolbar";
 import type { ProductCategory } from "@/types/product.types";
 
@@ -21,6 +22,9 @@ export function CustomizationPanel() {
           activeCategory={activeCategory}
           onCategoryChange={setActiveCategory}
         />
+      </div>
+      <div className="mt-6">
+        <ProductSelector activeCategory={activeCategory} />
       </div>
     </section>
   );
