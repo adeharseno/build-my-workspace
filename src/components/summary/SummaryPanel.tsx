@@ -1,3 +1,7 @@
+import { SelectedItemList } from "@/components/summary/SelectedItemList";
+import { SummaryCount } from "@/components/summary/SummaryCount";
+import { SummaryTotal } from "@/components/summary/SummaryTotal";
+
 export function SummaryPanel() {
   return (
     <aside
@@ -7,9 +11,13 @@ export function SummaryPanel() {
       <h2 id="summary-panel-title" className="text-lg font-semibold">
         Your Workspace
       </h2>
-      <p className="mt-2 text-sm text-neutral-500">
-        Workspace details will appear here in a later phase.
-      </p>
+      <div className="mt-4">
+        <SelectedItemList />
+      </div>
+      <div className="mt-6 space-y-2 border-t border-neutral-200 pt-4">
+        <SummaryCount />
+        <SummaryTotal />
+      </div>
     </aside>
   );
 }

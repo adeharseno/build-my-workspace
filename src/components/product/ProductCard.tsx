@@ -1,16 +1,11 @@
 import type { Product } from "@/types/product.types";
+import { formatPrice } from "@/utils/formatPrice";
 
 interface ProductCardProps {
   product: Product;
   selected: boolean;
   onSelect: () => void;
 }
-
-const priceFormatter = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  maximumFractionDigits: 0,
-});
 
 export function ProductCard({
   product,
@@ -37,7 +32,7 @@ export function ProductCard({
       </span>
       <span className="mt-3 flex items-start justify-between gap-4">
         <span className="font-medium">{product.name}</span>
-        <span className="text-sm">{priceFormatter.format(product.price)}</span>
+        <span className="text-sm">{formatPrice(product.price)}</span>
       </span>
       {selected && (
         <span className="mt-2 block text-xs font-medium">Selected</span>
